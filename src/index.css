@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-caslon: 'Libre Caslon Text', sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --color-primary: #270001;
+  --color-primary-fixed: #ffdad6;
+  --color-primary-container: #4e0406;
+  --color-on-primary-container: #d66b62;
+  --color-inverse-primary: #ffb4ac;
+  --color-on-primary: #ffffff;
+  --color-surface: #fff8f5;
+  --color-on-surface: #1e1b18;
+  --color-on-surface-variant: #564240;
+  --color-surface-container: #f5ece7;
+  --color-surface-container-low: #fbf2ed;
+  --color-surface-container-highest: #e9e1dc;
+  --color-tertiary-fixed-dim: #eebd8e;
+  --color-outline: #89726f;
+
+  --font-display: var(--font-caslon);
+  --font-body: var(--font-jakarta);
+}
+
+@utility tapis-divider {
+  height: 8px;
+  background-image: radial-gradient(#ad8258 1px, transparent 1px);
+  background-size: 16px 16px;
+  opacity: 0.3;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+@utility boutique-shadow {
+  box-shadow: 0 16px 32px -4px rgba(78, 4, 6, 0.08);
+}
