@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import instagramimg from "../assets/instagram.png";
+import tiktokimg from "../assets/tiktok.png";
 
 const links = [
   {
@@ -56,13 +58,13 @@ export default function Footer() {
                 to="https://www.instagram.com/damarian_lampung/"
                 className="border-primary-fixed/30 bg-primary-fixed/50 hover:bg-primary-fixed hover:text-primary flex h-10 w-10 items-center justify-center rounded-full border text-white transition-all"
               >
-                <img src="src/assets/Instagram.png" className="size-6" />
+                <img src={instagramimg} className="size-6" />
               </Link>
               <Link
                 to="https://www.tiktok.com/@damarian_lampung"
                 className="border-primary-fixed/30 bg-primary-fixed/50 hover:bg-primary-fixed hover:text-primary flex h-10 w-10 items-center justify-center rounded-full border text-white transition-all"
               >
-                <img src="src/assets/tiktok.png" className="size-6" />
+                <img src={tiktokimg} className="size-6" />
               </Link>
             </div>
           </div>

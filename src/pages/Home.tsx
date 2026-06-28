@@ -15,6 +15,12 @@ import {
   Star,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroimg from "../assets/hero.png";
+import aboutimg from "../assets/about.png";
+import keripikimg from "../assets/keripik.png";
+import kopiimg from "../assets/kopi.png";
+import kainimg from "../assets/tapis.png";
+import suvenirimg from "../assets/suvenir.png";
 
 export default function Page() {
   return (
@@ -24,7 +30,7 @@ export default function Page() {
         <div className="absolute inset-0 z-0">
           <div className="from-primary/80 absolute inset-0 z-10 bg-gradient-to-r to-transparent"></div>
           <img
-            src="src/assets/hero.png"
+            src={heroimg}
             alt="Damarian Store Interior"
             className="h-full w-full object-cover"
             referrerPolicy="no-referrer"
@@ -83,7 +89,7 @@ export default function Page() {
           </div>
           <div className="boutique-shadow relative order-1 aspect-video overflow-hidden rounded-2xl md:order-2">
             <img
-              src="src/assets/about.png"
+              src={aboutimg}
               alt="Tapis weaving"
               className="h-full w-full object-cover"
               referrerPolicy="no-referrer"
@@ -151,22 +157,22 @@ export default function Page() {
             {
               tag: "Kudapan",
               title: "Keripik & Camilan",
-              img: "src/assets/keripik.png",
+              img: keripikimg,
             },
             {
               tag: "Minuman",
               title: "Kopi Khas Lampung",
-              img: "src/assets/kopi.png",
+              img: kopiimg,
             },
             {
               tag: "Budaya",
               title: "Kain Tapis & Pakaian",
-              img: "src/assets/tapis.png",
+              img: kainimg,
             },
             {
               tag: "Suvenir",
               title: "Suvenir",
-              img: "src/assets/suvenir.png",
+              img: suvenirimg,
             },
           ].map((item, i) => (
             <div
