@@ -231,7 +231,7 @@ export default function Product() {
                     key={pIdx}
                     className="bg-surface outline-primary/50 boutique-shadow group flex flex-col overflow-hidden rounded-xl outline"
                   >
-                    <div className="bg-surface-container-highest relative h-40 overflow-hidden p-4 md:h-64">
+                    <div className="bg-surface-container-highest relative h-40 overflow-hidden p-2 md:h-64 md:p-4">
                       <img
                         src={product.img}
                         alt={product.name}
@@ -239,8 +239,8 @@ export default function Product() {
                         referrerPolicy="no-referrer"
                       />
                     </div>
-                    <div className="bg-surface flex flex-1 flex-col p-6">
-                      <h4 className="font-display mb-2 flex-1 text-base font-semibold md:text-xl">
+                    <div className="bg-surface flex flex-1 flex-col p-3 pb-4 md:p-6">
+                      <h4 className="font-display mb-1 flex-1 text-base font-semibold md:text-xl lg:mb-2">
                         {product.name}
                       </h4>
                       <p className="text-primary text-sm font-bold lg:text-lg">
