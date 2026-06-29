@@ -204,7 +204,7 @@ export default function Product() {
         <h1 className="font-display text-primary mb-6 text-4xl font-bold md:text-5xl">
           Katalog Buah Tangan Damarian
         </h1>
-        <p className="text-on-surface-variant mx-auto max-w-2xl text-lg">
+        <p className="text-on-surface-variant mx-auto max-w-2xl text-base md:text-lg">
           Dari renyahnya camilan hingga mahakarya kriya lokal. Temukan dan pilih
           langsung oleh-oleh khas Lampung favorit Anda dan keluarga di sini.
         </p>
@@ -216,34 +216,34 @@ export default function Product() {
           {categories.map((cat, idx) => (
             <div
               key={idx}
-              className="rounded-2xl border border-gray-300 bg-white p-20 shadow"
+              className="rounded-2xl border border-gray-300 bg-white p-4 py-8 shadow lg:p-20 lg:py-20"
             >
               <h2 className="font-display text-primary mb-4 text-3xl font-bold">
                 {cat.title}
               </h2>
-              <p className="text-on-surface-variant mb-8 max-w-3xl text-lg leading-relaxed">
+              <p className="text-on-surface-variant mb-8 max-w-3xl text-sm leading-relaxed md:text-lg">
                 {cat.description}
               </p>
 
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
                 {cat.products.map((product, pIdx) => (
                   <div
                     key={pIdx}
                     className="bg-surface outline-primary/50 boutique-shadow group flex flex-col overflow-hidden rounded-xl outline"
                   >
-                    <div className="bg-surface-container-highest relative h-64 overflow-hidden p-4">
+                    <div className="bg-surface-container-highest relative h-40 overflow-hidden p-4 md:h-64">
                       <img
                         src={product.img}
                         alt={product.name}
-                        className="h-full w-full rounded-lg object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full rounded-lg object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
                       />
                     </div>
                     <div className="bg-surface flex flex-1 flex-col p-6">
-                      <h4 className="font-display mb-2 flex-1 text-xl font-semibold">
+                      <h4 className="font-display mb-2 flex-1 text-base font-semibold md:text-xl">
                         {product.name}
                       </h4>
-                      <p className="text-primary text-lg font-bold">
+                      <p className="text-primary text-sm font-bold lg:text-lg">
                         {product.price}
                       </p>
                     </div>
@@ -261,7 +261,7 @@ export default function Product() {
           <h2 className="font-display text-primary-fixed mb-6 text-3xl font-bold md:text-4xl">
             Bingung Mau Pilih yang Mana?
           </h2>
-          <p className="text-primary-fixed/80 mb-10 text-lg leading-relaxed">
+          <p className="text-primary-fixed/80 mb-10 text-sm leading-relaxed md:text-lg">
             Admin kami siap membantu Anda menyusun paket oleh-oleh terbaik
             sesuai kebutuhan dan budget Anda. Dapatkan juga layanan gratis
             pengemasan kardus untuk pembelian Anda!

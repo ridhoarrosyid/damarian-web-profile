@@ -42,7 +42,7 @@ export default function Page() {
             Autentik, Lengkap, dan Nyaman. Destinasi Utama Oleh-Oleh Khas
             Lampung.
           </h1>
-          <p className="font-body mb-10 max-w-2xl text-lg text-white/90">
+          <p className="font-body mb-10 max-w-2xl text-base text-white/90 lg:text-lg">
             Bawa pulang sepotong kehangatan pesona Lampung untuk keluarga
             tersayang. Temukan ratusan pilihan camilan, kopi, dan kerajinan
             tangan terbaik hanya di Damarian.
@@ -78,7 +78,7 @@ export default function Page() {
             <h2 className="font-display text-primary mb-6 text-3xl leading-tight font-semibold md:text-4xl">
               Lebih dari Sekadar Toko, Kami Merawat Tradisi
             </h2>
-            <p className="text-on-surface-variant mb-8 text-lg leading-relaxed">
+            <p className="text-on-surface-variant mb-8 text-base leading-relaxed lg:text-lg">
               Berawal dari kecintaan pada kekayaan budaya dan kuliner Sang Bumi
               Ruwa Jurai, Damarian hadir sebagai pusat oleh-oleh terlengkap di
               Bandar Lampung. Kami berkomitmen menyajikan produk-produk UMKM
@@ -209,7 +209,7 @@ export default function Page() {
             <h2 className="font-display text-primary mb-2 text-3xl font-semibold md:text-4xl">
               Favorit Para Wisatawan
             </h2>
-            <p className="text-on-surface-variant text-lg">
+            <p className="text-on-surface-variant text-base lg:text-lg">
               Pilihan wajib yang pantang dilewatkan saat berkunjung ke Lampung.
             </p>
           </div>
@@ -255,9 +255,12 @@ export default function Page() {
                   <p className="text-primary mb-4 text-lg font-bold">
                     {item.price}
                   </p>
-                  <button className="border-primary text-primary hover:bg-primary w-full rounded-lg border py-2 text-sm font-semibold tracking-wide uppercase transition-colors hover:text-white">
-                    Tambah
-                  </button>
+                  <Link
+                    to="https://wa.me/6282184565848"
+                    className="border-primary text-primary hover:bg-primary w-full rounded-lg border py-2 text-center text-sm font-semibold tracking-wide uppercase transition-colors hover:text-white"
+                  >
+                    Order
+                  </Link>
                 </div>
               </div>
             ))}
@@ -265,7 +268,7 @@ export default function Page() {
           <div className="mt-16 text-center">
             <Link
               to="https://wa.me/6282184565848"
-              className="font-display boutique-shadow inline-flex items-center gap-3 rounded-full bg-[#25D366] px-10 py-4 text-xl font-semibold text-white transition-transform hover:scale-105"
+              className="font-display boutique-shadow inline-flex items-center gap-3 rounded-full bg-[#25D366] px-10 py-4 text-base font-semibold text-white transition-transform hover:scale-105 lg:text-xl"
             >
               <MessageCircle />
               Pesan Cepat via WhatsApp
@@ -283,7 +286,7 @@ export default function Page() {
               <h2 className="font-display text-on-primary-container mb-4 text-3xl font-semibold md:text-4xl">
                 Penawaran Spesial Bulan Ini!
               </h2>
-              <p className="text-on-primary-container/80 mb-8 text-lg">
+              <p className="text-on-primary-container/80 mb-8 text-base lg:text-lg">
                 Belanja lebih banyak, tentu lebih hemat. Manfaatkan promo khusus
                 kami untuk Anda dan rombongan.
               </p>
@@ -291,7 +294,7 @@ export default function Page() {
                 <h3 className="font-display mb-2 text-xl font-semibold md:text-3xl">
                   Paket Hemat Keluarga
                 </h3>
-                <p className="text-lg">
+                <p className="text-sm lg:text-base">
                   Beli 5 Varian Keripik, Gratis 1 Kopi Robusta 100gr!
                 </p>
               </div>
@@ -326,7 +329,7 @@ export default function Page() {
           <h2 className="font-display text-primary mb-4 text-3xl font-semibold md:text-4xl">
             Ramah Rombongan, Belanja Tanpa Pusing
           </h2>
-          <p className="text-on-surface-variant mx-auto mb-16 max-w-2xl text-lg">
+          <p className="text-on-surface-variant mx-auto mb-16 max-w-2xl text-base md:text-lg">
             Kami siap menyambut kedatangan Anda. Damarian didesain khusus agar
             ramah bagi rombongan keluarga, turis, maupun bus pariwisata.
           </p>
@@ -375,10 +378,16 @@ export default function Page() {
               >
                 <div className="text-tertiary-fixed-dim mb-4 flex">
                   {[...Array(5)].map((_, idx) => (
-                    <Star key={idx} className="-current h-5 w-5" />
+                    <Star
+                      fill="#eebd8e"
+                      key={idx}
+                      className="-current h-5 w-5"
+                    />
                   ))}
                 </div>
-                <p className="mb-6 flex-1 text-lg italic">{item.text}</p>
+                <p className="mb-6 flex-1 text-sm italic md:text-lg">
+                  {item.text}
+                </p>
                 <div className="flex items-center gap-4">
                   <div className="bg-surface/20 h-12 w-12 flex-shrink-0 rounded-full"></div>
                   <div>
@@ -421,7 +430,7 @@ export default function Page() {
         id="location"
         className="relative overflow-hidden py-16 md:py-24"
       >
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 md:px-20 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 md:grid-cols-2 md:px-20">
           <div>
             <h2 className="font-display text-primary mb-8 text-4xl leading-tight font-bold md:text-5xl">
               Belum Mampir ke Damarian, Belum ke Lampung!
@@ -429,13 +438,15 @@ export default function Page() {
             <div className="mb-10 space-y-6">
               <div className="flex items-start gap-4">
                 <MapPin className="text-primary mt-1 flex-shrink-0" />
-                <p className="text-lg">
+                <p className="text-base md:text-lg">
                   Jl. Ryacudu, Sukarame, Kota Bandar Lampung
                 </p>
               </div>
               <div className="flex items-start gap-4">
                 <Clock className="text-primary mt-1 flex-shrink-0" />
-                <p className="text-lg">Buka Setiap Hari | 07.00 - 22.00 WIB</p>
+                <p className="text-base md:text-lg">
+                  Buka Setiap Hari | 07.00 - 22.00 WIB
+                </p>
               </div>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -454,7 +465,7 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="boutique-shadow relative mt-8 aspect-square h-[300px] overflow-hidden rounded-3xl md:mt-0 md:h-[450px]">
+          <div className="boutique-shadow relative mt-8 aspect-square h-[300px] place-self-center overflow-hidden rounded-3xl md:mt-0 md:h-[450px] lg:place-self-auto">
             <img
               src="https://mms.img.susercontent.com/sg-11134004-7qvfv-lih37l1v5ci71f"
               alt="Map Location"
