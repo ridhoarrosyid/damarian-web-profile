@@ -49,13 +49,13 @@ export default function Page() {
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
-              to="#products"
+              to="/product"
               className="bg-surface text-primary hover:bg-surface-container-high inline-block rounded-lg px-8 py-4 text-center text-sm font-semibold tracking-wide uppercase transition-colors"
             >
               Lihat Katalog Produk
             </Link>
             <Link
-              to="#location"
+              to="https://www.google.com/maps/dir//PUSAT+OLEH+OLEH+LAMPUNG+DAMARIAN,+Jl.+Ryacudu+Jl.+Perumahan+Korpri+No.4+Blok+C8,+Harapan+Jaya,+Kec.+Sukarame,+Kota+Bandar+Lampung,+Lampung+35131/@-5.369744,105.2365387,14z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x2e40db4da6dfe4e9:0x6bdbbd5741062033!2m2!1d105.2994118!2d-5.3684192?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
               className="flex items-center justify-center gap-2 rounded-lg border border-white/50 px-8 py-4 text-center text-sm font-semibold tracking-wide text-white uppercase transition-colors hover:bg-white/10"
             >
               <Map className="h-5 w-5" />

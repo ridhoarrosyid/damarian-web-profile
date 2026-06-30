@@ -1,5 +1,6 @@
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Minus, Plus, ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCart } from "../hook/useCart";
 
 const categories = [
   {
@@ -8,21 +9,25 @@ const categories = [
       "Primadona oleh-oleh khas Lampung! Nikmati irisan pisang kepok pilihan dan aneka bahan baku lokal yang digoreng sempurna. Renyah di setiap gigitan, kaya akan taburan bumbu berlapis yang menggugah selera.",
     products: [
       {
+        id: 1,
         name: "Keripik Pisang Cokelat",
         price: "Rp 25.000",
         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKdpsn3x-suiu9FYDW9gtYhIqzai9FQqO8gU5VED-X5R46ruYGLRZkypCRSDV8zYw6ef9MriZqE-A4-ilZ4nkc0ZGFxRCGaU3XN6Wi6hVnd1_U2r7ov-mBj6nqruYtbFuPq5Ym_KQ33foBvPxPpfEFO5DaYaNyz-xxqFggrJ_avlKRVLIib3jEaDl7K_KcEWePPDf1PoNXQmiWBmItFzqOM4xRhocSrnlZgdC0UIc1YvSR9GpnaJPyMH_uP62-IOPP12308j91hPE",
       },
       {
+        id: 2,
         name: "Keripik Pisang Keju",
         price: "Rp 25.000",
         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKdpsn3x-suiu9FYDW9gtYhIqzai9FQqO8gU5VED-X5R46ruYGLRZkypCRSDV8zYw6ef9MriZqE-A4-ilZ4nkc0ZGFxRCGaU3XN6Wi6hVnd1_U2r7ov-mBj6nqruYtbFuPq5Ym_KQ33foBvPxPpfEFO5DaYaNyz-xxqFggrJ_avlKRVLIib3jEaDl7K_KcEWePPDf1PoNXQmiWBmItFzqOM4xRhocSrnlZgdC0UIc1YvSR9GpnaJPyMH_uP62-IOPP12308j91hPE",
       },
       {
+        id: 3,
         name: "Keripik Pisang Cokelat",
         price: "Rp 25.000",
         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKdpsn3x-suiu9FYDW9gtYhIqzai9FQqO8gU5VED-X5R46ruYGLRZkypCRSDV8zYw6ef9MriZqE-A4-ilZ4nkc0ZGFxRCGaU3XN6Wi6hVnd1_U2r7ov-mBj6nqruYtbFuPq5Ym_KQ33foBvPxPpfEFO5DaYaNyz-xxqFggrJ_avlKRVLIib3jEaDl7K_KcEWePPDf1PoNXQmiWBmItFzqOM4xRhocSrnlZgdC0UIc1YvSR9GpnaJPyMH_uP62-IOPP12308j91hPE",
       },
       {
+        id: 4,
         name: "Keripik Pisang Keju",
         price: "Rp 25.000",
         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKdpsn3x-suiu9FYDW9gtYhIqzai9FQqO8gU5VED-X5R46ruYGLRZkypCRSDV8zYw6ef9MriZqE-A4-ilZ4nkc0ZGFxRCGaU3XN6Wi6hVnd1_U2r7ov-mBj6nqruYtbFuPq5Ym_KQ33foBvPxPpfEFO5DaYaNyz-xxqFggrJ_avlKRVLIib3jEaDl7K_KcEWePPDf1PoNXQmiWBmItFzqOM4xRhocSrnlZgdC0UIc1YvSR9GpnaJPyMH_uP62-IOPP12308j91hPE",
@@ -35,21 +40,25 @@ const categories = [
       "Manisnya tradisi yang tak lekang oleh waktu. Terbuat dari buah-buahan segar dan bahan alami berkualitas tanpa pengawet. Tekstur kenyal dan rasa legitnya cocok untuk menemani waktu santai bersama keluarga.",
     products: [
       {
+        id: 1,
         name: "Lempok Durian Super",
         price: "Rp 65.000",
         img: "https://down-id.img.susercontent.com/file/8604489e0f64c5a5274296f40af44940",
       },
       {
+        id: 2,
         name: "Dodol Pandan",
         price: "Rp 35.000",
         img: "https://down-id.img.susercontent.com/file/8604489e0f64c5a5274296f40af44940",
       },
       {
+        id: 3,
         name: "Lempok Durian Super",
         price: "Rp 65.000",
         img: "https://down-id.img.susercontent.com/file/8604489e0f64c5a5274296f40af44940",
       },
       {
+        id: 4,
         name: "Dodol Pandan",
         price: "Rp 35.000",
         img: "https://down-id.img.susercontent.com/file/8604489e0f64c5a5274296f40af44940",
@@ -62,21 +71,25 @@ const categories = [
       "Perpaduan tekstur kenyal dan rasa manis alami dari pisang pilihan yang diproses dengan higienis. Pilihan camilan sehat dan tahan lama yang pas untuk dibawa perjalanan jauh.",
     products: [
       {
+        id: 1,
         name: "Sale Pisang Ambon",
         price: "Rp 30.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5BbxV4u8P1CFfpfjyIb_E_XlijzrqMv35gjBjDgDobT-UkuKi7_0_0OLM&s=10",
       },
       {
+        id: 2,
         name: "Sale Pisang Gulung",
         price: "Rp 30.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5BbxV4u8P1CFfpfjyIb_E_XlijzrqMv35gjBjDgDobT-UkuKi7_0_0OLM&s=10",
       },
       {
+        id: 3,
         name: "Sale Pisang Ambon",
         price: "Rp 30.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5BbxV4u8P1CFfpfjyIb_E_XlijzrqMv35gjBjDgDobT-UkuKi7_0_0OLM&s=10",
       },
       {
+        id: 4,
         name: "Sale Pisang Gulung",
         price: "Rp 30.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5BbxV4u8P1CFfpfjyIb_E_XlijzrqMv35gjBjDgDobT-UkuKi7_0_0OLM&s=10",
@@ -89,21 +102,25 @@ const categories = [
       "Bawa pulang keharuman kopi Robusta terbaik dari dataran tinggi Lampung. Dipanggang dengan tingkat kematangan presisi untuk menghasilkan karakter rasa yang kuat, tebal, dan aroma yang memikat para penikmat kopi sejati.",
     products: [
       {
+        id: 1,
         name: "Kopi Robusta Premium 250g",
         price: "Rp 45.000",
         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuADE066rMPtkXChFFLs-neMHOzTOwCo56_udgepZKj4EhImjhR266AYK74Gpk68h_wK_0G0bY31CliKOCsUduH95NDkSDTq5-zjls2ojRPuMYD-B7pcEuf8yoPFf2DvMzVBL3bReU7uuZrODSLdOz2iVNspjurAqrJ9SQgYkMXaJN7EOewVSvgYqH2UmbkFSMC13yNJ_JAeLnpJH4stJ2lW2XmaM7j4UJcK9hiIengERQkhXmpwOXGj_uH8SX6tXIyaVrXSygSPZ98",
       },
       {
+        id: 2,
         name: "Kopi Luwak Liar Kemasan",
         price: "Rp 150.000",
         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuADE066rMPtkXChFFLs-neMHOzTOwCo56_udgepZKj4EhImjhR266AYK74Gpk68h_wK_0G0bY31CliKOCsUduH95NDkSDTq5-zjls2ojRPuMYD-B7pcEuf8yoPFf2DvMzVBL3bReU7uuZrODSLdOz2iVNspjurAqrJ9SQgYkMXaJN7EOewVSvgYqH2UmbkFSMC13yNJ_JAeLnpJH4stJ2lW2XmaM7j4UJcK9hiIengERQkhXmpwOXGj_uH8SX6tXIyaVrXSygSPZ98",
       },
       {
+        id: 3,
         name: "Kopi Robusta Premium 250g",
         price: "Rp 45.000",
         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuADE066rMPtkXChFFLs-neMHOzTOwCo56_udgepZKj4EhImjhR266AYK74Gpk68h_wK_0G0bY31CliKOCsUduH95NDkSDTq5-zjls2ojRPuMYD-B7pcEuf8yoPFf2DvMzVBL3bReU7uuZrODSLdOz2iVNspjurAqrJ9SQgYkMXaJN7EOewVSvgYqH2UmbkFSMC13yNJ_JAeLnpJH4stJ2lW2XmaM7j4UJcK9hiIengERQkhXmpwOXGj_uH8SX6tXIyaVrXSygSPZ98",
       },
       {
+        id: 4,
         name: "Kopi Luwak Liar Kemasan",
         price: "Rp 150.000",
         img: "https://lh3.googleusercontent.com/aida-public/AB6AXuADE066rMPtkXChFFLs-neMHOzTOwCo56_udgepZKj4EhImjhR266AYK74Gpk68h_wK_0G0bY31CliKOCsUduH95NDkSDTq5-zjls2ojRPuMYD-B7pcEuf8yoPFf2DvMzVBL3bReU7uuZrODSLdOz2iVNspjurAqrJ9SQgYkMXaJN7EOewVSvgYqH2UmbkFSMC13yNJ_JAeLnpJH4stJ2lW2XmaM7j4UJcK9hiIengERQkhXmpwOXGj_uH8SX6tXIyaVrXSygSPZ98",
@@ -116,21 +133,25 @@ const categories = [
       "Sentuhan seni dan kebudayaan Lampung dalam bentuk fisik. Temukan keindahan kain tenun Tapis, kaus bertema lokal, hingga pernak-pernik suvenir cantik hasil mahakarya para pengrajin lokal berbakat.",
     products: [
       {
+        id: 1,
         name: "Selendang Kain Tapis",
         price: "Rp 250.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYDagRiuvXNjsdWv0OTE8ieEYXKyNyUY4VaHAFUUUROfov81xNVh1Ctsi_&s=10",
       },
       {
+        id: 2,
         name: "Gantungan Kunci Siger",
         price: "Rp 15.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYDagRiuvXNjsdWv0OTE8ieEYXKyNyUY4VaHAFUUUROfov81xNVh1Ctsi_&s=10",
       },
       {
+        id: 3,
         name: "Selendang Kain Tapis",
         price: "Rp 250.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYDagRiuvXNjsdWv0OTE8ieEYXKyNyUY4VaHAFUUUROfov81xNVh1Ctsi_&s=10",
       },
       {
+        id: 4,
         name: "Gantungan Kunci Siger",
         price: "Rp 15.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYDagRiuvXNjsdWv0OTE8ieEYXKyNyUY4VaHAFUUUROfov81xNVh1Ctsi_&s=10",
@@ -143,21 +164,25 @@ const categories = [
       "Tambahkan sensasi pedas gurih khas Sumatera ke meja makan Anda. Diraci dari cabai segar dan bumbu pilihan, dikemas rapat agar rasa dan aromanya tetap terjaga sempurna sampai di rumah.",
     products: [
       {
+        id: 1,
         name: "Sambal Lingkung Ikan",
         price: "Rp 40.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCEcbu8oAy1iw2mg_Wm1__yyIKpw_o9UdiYok6-lpQx-SgIGZV4JKchBM&s=10",
       },
       {
+        id: 2,
         name: "Sambal Bawang Ekstra Pedas",
         price: "Rp 35.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCEcbu8oAy1iw2mg_Wm1__yyIKpw_o9UdiYok6-lpQx-SgIGZV4JKchBM&s=10",
       },
       {
+        id: 3,
         name: "Sambal Lingkung Ikan",
         price: "Rp 40.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCEcbu8oAy1iw2mg_Wm1__yyIKpw_o9UdiYok6-lpQx-SgIGZV4JKchBM&s=10",
       },
       {
+        id: 4,
         name: "Sambal Bawang Ekstra Pedas",
         price: "Rp 35.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCEcbu8oAy1iw2mg_Wm1__yyIKpw_o9UdiYok6-lpQx-SgIGZV4JKchBM&s=10",
@@ -170,21 +195,25 @@ const categories = [
       "Pendamping wajib untuk setiap hidangan. Dibuat dari olahan ikan segar pilihan yang memberikan rasa gurih maksimal, dipanggang atau digoreng hingga mekar merata. Jangan lupa padukan dengan cocolan sambal terasinya!",
     products: [
       {
+        id: 1,
         name: "Kemplang Panggang Khas",
         price: "Rp 35.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyIEfnTEwOnQJms8gLICRC3_Rhubo1GPqCLsc_UYAYwNcwEPJ4udqEiIM&s=10",
       },
       {
+        id: 2,
         name: "Kerupuk Ikan Tenggiri",
         price: "Rp 35.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyIEfnTEwOnQJms8gLICRC3_Rhubo1GPqCLsc_UYAYwNcwEPJ4udqEiIM&s=10",
       },
       {
+        id: 3,
         name: "Kemplang Panggang Khas",
         price: "Rp 35.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyIEfnTEwOnQJms8gLICRC3_Rhubo1GPqCLsc_UYAYwNcwEPJ4udqEiIM&s=10",
       },
       {
+        id: 4,
         name: "Kerupuk Ikan Tenggiri",
         price: "Rp 35.000",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyIEfnTEwOnQJms8gLICRC3_Rhubo1GPqCLsc_UYAYwNcwEPJ4udqEiIM&s=10",
@@ -194,6 +223,7 @@ const categories = [
 ];
 
 export default function Product() {
+  const { cartItems, addToCart, updateQuantity } = useCart();
   return (
     <>
       {/* Hero Catalog */}
@@ -225,30 +255,72 @@ export default function Product() {
                 {cat.description}
               </p>
 
-              <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
-                {cat.products.map((product, pIdx) => (
-                  <div
-                    key={pIdx}
-                    className="bg-surface outline-primary/50 boutique-shadow group flex flex-col overflow-hidden rounded-xl outline"
-                  >
-                    <div className="bg-surface-container-highest relative h-40 overflow-hidden p-2 md:h-64 md:p-4">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {cat.products.map((product, pIdx) => {
+                  const productId = product.id || pIdx;
+                  const cartItem = cartItems.find(
+                    (item) => item.id === productId,
+                  );
+                  // Jika ada, ambil jumlahnya. Jika tidak, nilainya 0.
+                  const quantity = cartItem ? cartItem.quantity : 0;
+                  return (
+                    <div
+                      key={pIdx}
+                      className="bg-surface outline-primary/50 boutique-shadow group flex flex-col gap-y-2 overflow-hidden rounded-xl p-4 outline"
+                    >
                       <img
                         src={product.img}
                         alt={product.name}
-                        className="h-full w-full rounded-lg object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                        className="aspect-video w-full rounded-lg object-cover outline-1 outline-gray-300 transition-transform duration-500 group-hover:scale-105"
                         referrerPolicy="no-referrer"
                       />
-                    </div>
-                    <div className="bg-surface flex flex-1 flex-col p-3 pb-4 md:p-6">
-                      <h4 className="font-display mb-1 flex-1 text-base font-semibold md:text-xl lg:mb-2">
+
+                      <h4 className="font-display mt-2 flex-1 text-base font-semibold md:text-xl lg:mb-2">
                         {product.name}
                       </h4>
-                      <p className="text-primary text-sm font-bold lg:text-lg">
-                        {product.price}
-                      </p>
+
+                      <div className="mt-auto flex items-center justify-between pt-2">
+                        <p className="text-primary text-sm font-bold lg:text-lg">
+                          {product.price}
+                        </p>
+
+                        {/* Kondisional Render: Tombol Add atau Kontrol Kuantitas */}
+                        {quantity > 0 ? (
+                          <div className="flex items-center rounded-lg border border-gray-200 bg-gray-50 shadow-sm">
+                            <button
+                              onClick={() =>
+                                updateQuantity(productId, "decrease")
+                              }
+                              className="hover:text-primary rounded-l-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-200"
+                            >
+                              <Minus size={16} strokeWidth={3} />
+                            </button>
+                            <span className="text-primary w-8 text-center text-sm font-bold">
+                              {quantity}
+                            </span>
+                            <button
+                              onClick={() =>
+                                updateQuantity(productId, "increase")
+                              }
+                              className="hover:text-primary rounded-r-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-200"
+                            >
+                              <Plus size={16} strokeWidth={3} />
+                            </button>
+                          </div>
+                        ) : (
+                          <button
+                            onClick={() =>
+                              addToCart({ ...product, id: productId })
+                            }
+                            className="bg-primary hover:bg-primary/90 rounded-lg p-2 text-white transition-all active:scale-95"
+                          >
+                            <ShoppingCart size={20} />
+                          </button>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -271,7 +343,7 @@ export default function Product() {
             className="inline-flex items-center justify-center gap-3 rounded-full bg-[#e9e4bb] px-10 py-4 font-semibold tracking-wide text-[#1e1c04] shadow-lg transition-colors hover:bg-[#ccc8a1]"
           >
             <MessageCircle className="h-5 w-5" />
-            Konsultasi & Pesan via WhatsApp
+            Pesan via WhatsApp
           </Link>
         </div>
       </section>
