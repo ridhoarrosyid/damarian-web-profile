@@ -18,10 +18,16 @@ export default function ContactPage() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 md:px-12 md:py-24">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h1 className="font-display text-primary mb-6 text-4xl font-bold md:text-5xl">
+          <h1
+            data-aos="fade-up"
+            className="font-display text-primary mb-6 text-4xl font-bold md:text-5xl"
+          >
             Mari Terhubung dengan Damarian
           </h1>
-          <p className="text-on-surface-variant mx-auto max-w-2xl text-lg leading-relaxed">
+          <p
+            data-aos="fade-up"
+            className="text-on-surface-variant mx-auto max-w-2xl text-lg leading-relaxed"
+          >
             Punya pertanyaan, ingin memesan untuk rombongan, atau sekadar
             menanyakan ketersediaan produk? Pilih jalur komunikasi yang paling
             nyaman untuk Anda di bawah ini.
@@ -33,7 +39,10 @@ export default function ContactPage() {
           {/* Left Column */}
           <div className="flex flex-col gap-6 lg:col-span-2">
             {/* Kunjungi Toko Kami */}
-            <div className="outline-primary/10 bg-surface-container-lowest boutique-shadow relative flex min-h-[480px] flex-col overflow-hidden rounded-3xl outline">
+            <div
+              data-aos="fade-up"
+              className="outline-primary/10 bg-surface-container-lowest boutique-shadow relative flex min-h-[480px] flex-col overflow-hidden rounded-3xl outline"
+            >
               <div className="relative z-10 flex-1 p-8 md:p-12">
                 <div className="mb-6 flex items-center gap-4">
                   <MapPin className="text-primary h-8 w-8" strokeWidth={1.5} />
@@ -74,7 +83,10 @@ export default function ContactPage() {
             </div>
 
             {/* Ikuti Keseruan Kami */}
-            <div className="boutique-shadow relative grid items-center gap-8 overflow-hidden rounded-3xl bg-[#e9e4bb] p-8 md:grid-cols-2 md:p-12">
+            <div
+              data-aos="fade-right"
+              className="boutique-shadow relative grid items-center gap-8 overflow-hidden rounded-3xl bg-[#e9e4bb] p-8 md:grid-cols-2 md:p-12"
+            >
               <div className="relative z-10">
                 <div className="mb-4 flex items-center gap-3">
                   <Share2
@@ -109,7 +121,10 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col gap-6 lg:col-span-1">
+          <div
+            data-aos="fade-left"
+            className="flex flex-col gap-6 lg:col-span-1"
+          >
             {/* Pesan & Tanya Cepat */}
             <div className="bg-primary text-primary-fixed boutique-shadow relative flex h-full min-h-[480px] flex-col overflow-hidden rounded-3xl p-8 md:p-10">
               <div className="pointer-events-none absolute top-0 right-0 h-48 w-48 rounded-bl-[100px] bg-white/5" />
@@ -146,7 +161,10 @@ export default function ContactPage() {
             </div>
 
             {/* Kemitraan & B2B */}
-            <div className="bg-surface-container-low boutique-shadow outline-primary/10 flex flex-col rounded-3xl p-8 outline-1 md:p-10">
+            <div
+              data-aos="fade-up"
+              className="bg-surface-container-low boutique-shadow outline-primary/10 flex flex-col rounded-3xl p-8 outline-1 md:p-10"
+            >
               <div className="mb-6 flex items-center gap-3">
                 <Handshake className="text-primary h-7 w-7" strokeWidth={1.5} />
                 <h2 className="font-display text-primary text-2xl font-bold">

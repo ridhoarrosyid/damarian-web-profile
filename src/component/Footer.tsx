@@ -21,9 +21,9 @@ export default function Footer() {
   return (
     <>
       {/* Footer */}
-      <footer className="bg-primary dark:bg-primary-container text-primary-fixed w-full py-10 md:py-20">
+      <footer className="bg-primary dark:bg-primary-container text-primary-fixed w-full overflow-hidden pt-10 pb-4 md:pt-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-10 md:grid-cols-3 md:px-20">
-          <div className="md:col-span-1">
+          <div data-aos="fade-up" className="md:col-span-1">
             <span className="font-display text-primary-fixed dark:text-primary-fixed mb-4 block text-3xl">
               Damarian
             </span>
@@ -31,7 +31,7 @@ export default function Footer() {
               Pusat Oleh-Oleh Paling Lengkap & Nyaman di Bandar Lampung.
             </p>
           </div>
-          <div className="md:col-span-1">
+          <div data-aos="fade-up" className="md:col-span-1">
             <h4 className="text-primary-fixed mb-6 text-sm font-bold tracking-widest uppercase">
               Navigasi
             </h4>
@@ -49,7 +49,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-1">
+          <div data-aos="fade-up" data-aos-offset="0" className="md:col-span-1">
             <h4 className="text-primary-fixed mb-6 text-sm font-bold tracking-widest uppercase">
               Ikuti Kami
             </h4>
@@ -69,7 +69,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-outline/20 text-primary-fixed/60 mx-auto mt-8 flex max-w-7xl flex-col items-center justify-between border-t px-10 pt-4 text-sm md:mt-16 md:flex-row md:px-20 md:pt-8">
+        <div
+          data-aos="fade-up"
+          data-aos-offset="0"
+          className="border-outline/20 text-primary-fixed/60 mx-auto mt-8 flex max-w-7xl flex-col items-center justify-between border-t px-10 pt-4 text-xs md:mt-16 md:flex-row md:px-20 md:pt-8"
+        >
           <p>© 2024 Damarian Lampung. All Rights Reserved.</p>
           <div className="mt-4 flex gap-6 md:mt-0">
             <span>Made with Heritage Heritage Pride</span>

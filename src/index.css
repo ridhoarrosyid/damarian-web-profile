@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
+@import "/node_modules/aos/dist/aos.css";
 
 @theme {
-  --font-caslon: 'Libre Caslon Text', sans-serif;
-  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --font-caslon: "Libre Caslon Text", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
   --color-primary: #270001;
   --color-primary-fixed: #ffdad6;
   --color-primary-container: #4e0406;

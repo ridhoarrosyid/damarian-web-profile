@@ -26,7 +26,7 @@ export default function Page() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative flex h-150 items-center overflow-hidden md:h-[870px]">
+      <section className="relative flex min-h-screen items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="from-primary/80 absolute inset-0 z-10 bg-linear-to-r to-transparent"></div>
           <img
@@ -38,23 +38,30 @@ export default function Page() {
           />
         </div>
         <div className="relative z-20 mx-auto w-full max-w-7xl px-6 text-white md:px-20">
-          <h1 className="font-display mb-6 max-w-3xl text-4xl leading-tight font-bold md:text-6xl">
-            Autentik, Lengkap, dan Nyaman. Destinasi Utama Oleh-Oleh Khas
-            Lampung.
+          <h1
+            data-aos="fade-right"
+            className="font-display mb-6 max-w-3xl text-4xl leading-tight font-bold md:text-6xl"
+          >
+            Destinasi Utama Oleh-Oleh Khas Lampung.
           </h1>
-          <p className="font-body mb-10 max-w-2xl text-base text-white/90 lg:text-lg">
+          <p
+            data-aos="fade-right"
+            className="font-body mb-10 max-w-2xl text-base text-white/90 lg:text-lg"
+          >
             Bawa pulang sepotong kehangatan pesona Lampung untuk keluarga
             tersayang. Temukan ratusan pilihan camilan, kopi, dan kerajinan
             tangan terbaik hanya di Damarian.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
+              data-aos="fade-up"
               to="/product"
               className="bg-surface text-primary hover:bg-surface-container-high inline-block rounded-lg px-8 py-4 text-center text-sm font-semibold tracking-wide uppercase transition-colors"
             >
               Lihat Katalog Produk
             </Link>
             <Link
+              data-aos="fade-up"
               to="https://www.google.com/maps/dir//PUSAT+OLEH+OLEH+LAMPUNG+DAMARIAN,+Jl.+Ryacudu+Jl.+Perumahan+Korpri+No.4+Blok+C8,+Harapan+Jaya,+Kec.+Sukarame,+Kota+Bandar+Lampung,+Lampung+35131/@-5.369744,105.2365387,14z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x2e40db4da6dfe4e9:0x6bdbbd5741062033!2m2!1d105.2994118!2d-5.3684192?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
               className="flex items-center justify-center gap-2 rounded-lg border border-white/50 px-8 py-4 text-center text-sm font-semibold tracking-wide text-white uppercase transition-colors hover:bg-white/10"
             >
@@ -72,13 +79,22 @@ export default function Page() {
       >
         <div className="grid items-center gap-8 md:grid-cols-2">
           <div className="order-2 md:order-1">
-            <div className="bg-primary-fixed text-primary mb-4 inline-block rounded-full px-4 py-1 text-xs font-semibold tracking-widest uppercase">
+            <div
+              data-aos="fade-right"
+              className="bg-primary-fixed text-primary mb-4 inline-block rounded-full px-4 py-1 text-xs font-semibold tracking-widest uppercase"
+            >
               Tentang Kami
             </div>
-            <h2 className="font-display text-primary mb-6 text-3xl leading-tight font-semibold md:text-4xl">
+            <h2
+              data-aos="fade-left"
+              className="font-display text-primary mb-6 text-3xl leading-tight font-semibold md:text-4xl"
+            >
               Lebih dari Sekadar Toko, Kami Merawat Tradisi
             </h2>
-            <p className="text-on-surface-variant mb-8 text-base leading-relaxed lg:text-lg">
+            <p
+              data-aos="fade-left"
+              className="text-on-surface-variant mb-8 text-base leading-relaxed lg:text-lg"
+            >
               Berawal dari kecintaan pada kekayaan budaya dan kuliner Sang Bumi
               Ruwa Jurai, Damarian hadir sebagai pusat oleh-oleh terlengkap di
               Bandar Lampung. Kami berkomitmen menyajikan produk-produk UMKM
@@ -87,7 +103,10 @@ export default function Page() {
             </p>
             <div className="tapis-divider"></div>
           </div>
-          <div className="boutique-shadow relative order-1 aspect-video overflow-hidden rounded-2xl md:order-2">
+          <div
+            data-aos="zoom-in-up"
+            className="boutique-shadow relative order-1 aspect-video overflow-hidden rounded-2xl md:order-2"
+          >
             <img
               src={aboutimg}
               alt="Tapis weaving"
@@ -101,7 +120,10 @@ export default function Page() {
       {/* Why Choose Us */}
       <section className="bg-surface-container py-16 md:py-24">
         <div className="mx-auto mb-16 max-w-7xl px-6 text-center md:px-20">
-          <h2 className="font-display text-primary text-3xl font-semibold md:text-4xl">
+          <h2
+            data-aos="fade-up"
+            className="font-display text-primary text-3xl font-semibold md:text-4xl"
+          >
             Mengapa Memilih Damarian?
           </h2>
         </div>
@@ -111,24 +133,29 @@ export default function Page() {
               icon: BadgeCheck,
               title: "Kualitas & Rasa Terjamin",
               desc: "Produk dikurasi ketat dengan standar kebersihan dan rasa yang konsisten tinggi.",
+              aos: "fade-right",
             },
             {
               icon: ShoppingBasket,
               title: "Paling Lengkap & Hemat",
               desc: "Dari keripik legendaris hingga kain Tapis autentik dengan harga bersaing.",
+              aos: "fade-left",
             },
             {
               icon: Snowflake,
               title: "Belanja Leluasa & Nyaman",
               desc: "Area belanja yang luas, modern, dan ber-AC demi kenyamanan keluarga Anda.",
+              aos: "fade-right",
             },
             {
               icon: Package,
               title: "Gratis Packing Aman",
               desc: "Layanan pengemasan kardus gratis untuk perjalanan udara maupun darat.",
+              aos: "fade-left",
             },
           ].map((item, i) => (
             <div
+              data-aos={item.aos}
               key={i}
               className="bg-surface boutique-shadow border-outline/5 rounded-xl border p-8 transition-transform duration-300 hover:-translate-y-2"
             >
@@ -149,7 +176,10 @@ export default function Page() {
         id="products"
         className="mx-auto max-w-7xl px-6 py-16 md:px-20 md:py-24"
       >
-        <h2 className="font-display text-primary mb-12 text-center text-3xl font-semibold md:text-4xl">
+        <h2
+          data-aos="fade-up"
+          className="font-display text-primary mb-12 text-center text-3xl font-semibold md:text-4xl"
+        >
           Ragam Pilihan Buah Tangan Lampung
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -176,6 +206,7 @@ export default function Page() {
             },
           ].map((item, i) => (
             <div
+              data-aos="fade-up"
               key={i}
               className="group boutique-shadow relative h-100 overflow-hidden rounded-2xl"
             >
@@ -205,7 +236,7 @@ export default function Page() {
         className="bg-surface-container-low overflow-hidden py-16 md:py-24"
       >
         <div className="mx-auto max-w-7xl px-6 md:px-20">
-          <div className="mb-16 text-center">
+          <div className="mb-16 text-center" data-aos="fade-up">
             <h2 className="font-display text-primary mb-2 text-3xl font-semibold md:text-4xl">
               Favorit Para Wisatawan
             </h2>
@@ -219,24 +250,29 @@ export default function Page() {
                 title: "ASKHA MELTED COKLAT",
                 price: "Rp 28,500",
                 img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCKdpsn3x-suiu9FYDW9gtYhIqzai9FQqO8gU5VED-X5R46ruYGLRZkypCRSDV8zYw6ef9MriZqE-A4-ilZ4nkc0ZGFxRCGaU3XN6Wi6hVnd1_U2r7ov-mBj6nqruYtbFuPq5Ym_KQ33foBvPxPpfEFO5DaYaNyz-xxqFggrJ_avlKRVLIib3jEaDl7K_KcEWePPDf1PoNXQmiWBmItFzqOM4xRhocSrnlZgdC0UIc1YvSR9GpnaJPyMH_uP62-IOPP12308j91hPE",
+                aos: "fade-left",
               },
               {
                 title: "49 KOPI PREMIUM",
                 price: "Rp 27,500",
                 img: "https://lh3.googleusercontent.com/aida-public/AB6AXuADE066rMPtkXChFFLs-neMHOzTOwCo56_udgepZKj4EhImjhR266AYK74Gpk68h_wK_0G0bY31CliKOCsUduH95NDkSDTq5-zjls2ojRPuMYD-B7pcEuf8yoPFf2DvMzVBL3bReU7uuZrODSLdOz2iVNspjurAqrJ9SQgYkMXaJN7EOewVSvgYqH2UmbkFSMC13yNJ_JAeLnpJH4stJ2lW2XmaM7j4UJcK9hiIengERQkhXmpwOXGj_uH8SX6tXIyaVrXSygSPZ98",
+                aos: "fade-right",
               },
               {
                 title: "ASS ABON AYAM",
                 price: "Rp 28,000",
                 img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWV4BkUH2_4wn73gdW7b5bpcnXYzxgw6y-cYnMJcDAzoJy59Suy5W-_jCD&s=10",
+                aos: "fade-left",
               },
               {
                 title: "ALYSA NAME TAG TAPIS",
                 price: "Rp 97,500",
                 img: "https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mcpbsydj297bcf",
+                aos: "fade-right",
               },
             ].map((item, i) => (
               <div
+                data-aos={item.aos}
                 key={i}
                 className="bg-surface boutique-shadow group flex flex-col overflow-hidden rounded-xl"
               >
@@ -267,6 +303,7 @@ export default function Page() {
           </div>
           <div className="mt-16 text-center">
             <Link
+              data-aos="zoom-in"
               to="https://wa.me/6282184565848"
               className="font-display boutique-shadow inline-flex items-center gap-3 rounded-full bg-[#25D366] px-10 py-4 text-base font-semibold text-white transition-transform hover:scale-105 lg:text-xl"
             >
@@ -280,7 +317,10 @@ export default function Page() {
       {/* Promo */}
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6 md:px-20">
-          <div className="bg-primary-container text-on-primary-container relative flex flex-col items-center gap-12 overflow-hidden rounded-3xl p-8 md:flex-row md:p-16">
+          <div
+            data-aos="zoom-in"
+            className="bg-primary-container text-on-primary-container relative flex flex-col items-center gap-12 overflow-hidden rounded-3xl p-8 md:flex-row md:p-16"
+          >
             <div className="bg-primary absolute top-0 right-0 -mt-32 -mr-32 h-64 w-64 rounded-full opacity-20"></div>
             <div className="relative z-10 flex-1">
               <h2 className="font-display text-on-primary-container mb-4 text-3xl font-semibold md:text-4xl">
@@ -326,10 +366,16 @@ export default function Page() {
       {/* Facilities */}
       <section className="bg-surface py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6 text-center md:px-20">
-          <h2 className="font-display text-primary mb-4 text-3xl font-semibold md:text-4xl">
+          <h2
+            data-aos="fade-up"
+            className="font-display text-primary mb-4 text-3xl font-semibold md:text-4xl"
+          >
             Ramah Rombongan, Belanja Tanpa Pusing
           </h2>
-          <p className="text-on-surface-variant mx-auto mb-16 max-w-2xl text-base md:text-lg">
+          <p
+            data-aos="fade-up"
+            className="text-on-surface-variant mx-auto mb-16 max-w-2xl text-base md:text-lg"
+          >
             Kami siap menyambut kedatangan Anda. Damarian didesain khusus agar
             ramah bagi rombongan keluarga, turis, maupun bus pariwisata.
           </p>
@@ -340,7 +386,11 @@ export default function Page() {
               { icon: Bath, label: "Toilet Bersih" },
               { icon: Armchair, label: "Ruang Tunggu Santai" },
             ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center">
+              <div
+                data-aos="zoom-in "
+                key={i}
+                className="flex flex-col items-center"
+              >
                 <div className="bg-surface-container-highest text-primary mb-4 flex h-16 w-16 items-center justify-center rounded-full">
                   <item.icon className="h-8 w-8" />
                 </div>
@@ -356,7 +406,10 @@ export default function Page() {
       {/* Testimonials */}
       <section className="bg-primary text-on-primary py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6 md:px-20">
-          <h2 className="font-display mb-16 text-center text-3xl font-semibold md:text-4xl">
+          <h2
+            data-aos="fade-up"
+            className="font-display mb-16 text-center text-3xl font-semibold md:text-4xl"
+          >
             Kata Mereka yang Sudah Mampir
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
@@ -374,6 +427,7 @@ export default function Page() {
             ].map((item, i) => (
               <div
                 key={i}
+                data-aos="fade-up"
                 className="bg-primary-container flex flex-col rounded-2xl border border-white/10 p-10"
               >
                 <div className="text-tertiary-fixed-dim mb-4 flex">
@@ -404,7 +458,10 @@ export default function Page() {
       {/* Partners */}
       <section className="py-16 opacity-50 grayscale transition-all duration-500 hover:grayscale-0">
         <div className="mx-auto max-w-7xl px-6 md:px-20">
-          <p className="mb-8 text-center text-sm font-semibold tracking-wide uppercase">
+          <p
+            data-aos="fade-up"
+            className="mb-8 text-center text-sm font-semibold tracking-wide uppercase"
+          >
             TELAH DIPERCAYA OLEH BANYAK MITRA
           </p>
           <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
@@ -416,6 +473,7 @@ export default function Page() {
             ].map((partner, i) => (
               <span
                 key={i}
+                data-aos="zoom-in"
                 className="font-display text-center text-2xl font-semibold"
               >
                 {partner}
@@ -430,7 +488,10 @@ export default function Page() {
         id="location"
         className="relative overflow-hidden py-16 md:py-24"
       >
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 md:grid-cols-2 md:px-20">
+        <div
+          data-aos="fade-left"
+          className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 md:grid-cols-2 md:px-20"
+        >
           <div>
             <h2 className="font-display text-primary mb-8 text-4xl leading-tight font-bold md:text-5xl">
               Belum Mampir ke Damarian, Belum ke Lampung!

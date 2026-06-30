@@ -228,13 +228,22 @@ export default function Product() {
     <>
       {/* Hero Catalog */}
       <section className="bg-surface-container flex min-h-screen flex-col items-center justify-center gap-5 px-6 text-center">
-        <span className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase">
+        <span
+          data-aos="zoom-in"
+          className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase"
+        >
           Katalog Lengkap
         </span>
-        <h1 className="font-display text-primary mb-6 text-4xl font-bold md:text-5xl">
+        <h1
+          data-aos="zoom-in"
+          className="font-display text-primary mb-6 text-4xl font-bold md:text-5xl"
+        >
           Katalog Buah Tangan Damarian
         </h1>
-        <p className="text-on-surface-variant mx-auto max-w-2xl text-base md:text-lg">
+        <p
+          data-aos="zoom-in"
+          className="text-on-surface-variant mx-auto max-w-2xl text-base md:text-lg"
+        >
           Dari renyahnya camilan hingga mahakarya kriya lokal. Temukan dan pilih
           langsung oleh-oleh khas Lampung favorit Anda dan keluarga di sini.
         </p>
@@ -248,10 +257,16 @@ export default function Product() {
               key={idx}
               className="rounded-2xl border border-gray-300 bg-white p-4 py-8 shadow lg:p-20 lg:py-20"
             >
-              <h2 className="font-display text-primary mb-4 text-3xl font-bold">
+              <h2
+                data-aos="fade-right"
+                className="font-display text-primary mb-4 text-3xl font-bold"
+              >
                 {cat.title}
               </h2>
-              <p className="text-on-surface-variant mb-8 max-w-3xl text-sm leading-relaxed md:text-lg">
+              <p
+                data-aos="fade-right"
+                className="text-on-surface-variant mb-8 max-w-3xl text-sm leading-relaxed md:text-lg"
+              >
                 {cat.description}
               </p>
 
@@ -265,6 +280,7 @@ export default function Product() {
                   const quantity = cartItem ? cartItem.quantity : 0;
                   return (
                     <div
+                      data-aos="fade-up"
                       key={pIdx}
                       className="bg-surface outline-primary/50 boutique-shadow group flex flex-col gap-y-2 overflow-hidden rounded-xl p-4 outline"
                     >
@@ -330,15 +346,22 @@ export default function Product() {
       {/* CTA Section */}
       <section className="bg-primary text-on-primary px-6 py-24 text-center">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-display text-primary-fixed mb-6 text-3xl font-bold md:text-4xl">
+          <h2
+            data-aos="fade-up"
+            className="font-display text-primary-fixed mb-6 text-3xl font-bold md:text-4xl"
+          >
             Bingung Mau Pilih yang Mana?
           </h2>
-          <p className="text-primary-fixed/80 mb-10 text-sm leading-relaxed md:text-lg">
+          <p
+            data-aos="fade-up"
+            className="text-primary-fixed/80 mb-10 text-sm leading-relaxed md:text-lg"
+          >
             Admin kami siap membantu Anda menyusun paket oleh-oleh terbaik
             sesuai kebutuhan dan budget Anda. Dapatkan juga layanan gratis
             pengemasan kardus untuk pembelian Anda!
           </p>
           <Link
+            data-aos="fade-up"
             to="https://wa.me/6282184565848"
             className="inline-flex items-center justify-center gap-3 rounded-full bg-[#e9e4bb] px-10 py-4 font-semibold tracking-wide text-[#1e1c04] shadow-lg transition-colors hover:bg-[#ccc8a1]"
           >
