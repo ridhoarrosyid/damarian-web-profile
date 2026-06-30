@@ -26,9 +26,9 @@ export default function Page() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative flex h-[600px] items-center overflow-hidden md:h-[870px]">
+      <section className="relative flex h-150 items-center overflow-hidden md:h-[870px]">
         <div className="absolute inset-0 z-0">
-          <div className="from-primary/80 absolute inset-0 z-10 bg-gradient-to-r to-transparent"></div>
+          <div className="from-primary/80 absolute inset-0 z-10 bg-linear-to-r to-transparent"></div>
           <img
             src={heroimg}
             alt="Damarian Store Interior"
@@ -177,7 +177,7 @@ export default function Page() {
           ].map((item, i) => (
             <div
               key={i}
-              className="group boutique-shadow relative h-[400px] overflow-hidden rounded-2xl"
+              className="group boutique-shadow relative h-100 overflow-hidden rounded-2xl"
             >
               <img
                 src={item.img}
@@ -185,7 +185,7 @@ export default function Page() {
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="from-primary/90 via-primary/20 absolute inset-0 bg-gradient-to-t to-transparent"></div>
+              <div className="from-primary/90 via-primary/20 absolute inset-0 bg-linear-to-t to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8">
                 <span className="mb-2 block text-xs font-semibold tracking-widest text-white/70 uppercase">
                   {item.tag}
@@ -389,7 +389,7 @@ export default function Page() {
                   {item.text}
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="bg-surface/20 h-12 w-12 flex-shrink-0 rounded-full"></div>
+                  <div className="bg-surface/20 h-12 w-12 shrink-0 rounded-full"></div>
                   <div>
                     <h4 className="font-bold">{item.name}</h4>
                     <p className="text-sm opacity-60">{item.role}</p>
@@ -437,13 +437,13 @@ export default function Page() {
             </h2>
             <div className="mb-10 space-y-6">
               <div className="flex items-start gap-4">
-                <MapPin className="text-primary mt-1 flex-shrink-0" />
+                <MapPin className="text-primary mt-1 shrink-0" />
                 <p className="text-base md:text-lg">
                   Jl. Ryacudu, Sukarame, Kota Bandar Lampung
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <Clock className="text-primary mt-1 flex-shrink-0" />
+                <Clock className="text-primary mt-1 shrink-0" />
                 <p className="text-base md:text-lg">
                   Buka Setiap Hari | 07.00 - 22.00 WIB
                 </p>
@@ -465,7 +465,7 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="boutique-shadow relative mt-8 aspect-square h-[300px] place-self-center overflow-hidden rounded-3xl md:mt-0 md:h-[450px] lg:place-self-auto">
+          <div className="boutique-shadow relative mt-8 aspect-square h-75 place-self-center overflow-hidden rounded-3xl md:mt-0 md:h-[450px] lg:place-self-auto">
             <img
               src="https://mms.img.susercontent.com/sg-11134004-7qvfv-lih37l1v5ci71f"
               alt="Map Location"
